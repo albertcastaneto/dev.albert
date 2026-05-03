@@ -56,7 +56,7 @@ function About() {
 
         <div className="stats-row">
           <div className="stat-box">
-            <span className="stat-num" data-target="2">0</span>
+            <span className="stat-num" data-target="3">0</span>
             <span className="stat-label">Years Pro</span>
           </div>
           <div className="stat-box">
@@ -75,7 +75,7 @@ function About() {
 
         <div className="timeline">
           <div className="timeline-item">
-            <div className="t-year">2024<br />–<br />NOW</div>
+            <div className="t-year">2025<br />–<br />NOW</div>
             <div>
               <p className="t-title">Software Developer</p>
               <p className="t-desc">Developing and maintaining enterprise systems including approval workflows, KRA-based performance evaluation (ePMS), sales management platforms, and automated government form processing used by internal teams daily.</p>

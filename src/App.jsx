@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Chatbot from './components/Chatbot'
 import MeshBackground from './components/MeshBackground'
+import PageLoader from './components/PageLoader'
 import MobileMenu from './components/MobileMenu'
 import ThemeToggle from './components/ThemeToggle'
 import ScrollProgress from './components/ScrollProgress'
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div>
+      <PageLoader />
       <MobileMenu />
       <ThemeToggle />
       <ScrollProgress />

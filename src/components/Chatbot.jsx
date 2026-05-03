@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY
+const apiKey = import.meta.env.VITE_GROQ_API_KEY
 
 const portfolioContext = `
 You are a helpful assistant for Albert Castañeto's portfolio website.
@@ -55,25 +55,30 @@ function Chatbot() {
     addMessage(msg, 'user')
     setInput('')
     setLoading(true)
-    conversationHistory.current.push({ role: 'user', parts: [{ text: msg }] })
+    conversationHistory.current.push({ role: 'user', content: msg })
 
     try {
-      const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            system_instruction: { parts: [{ text: portfolioContext }] },
-            contents: conversationHistory.current,
-            generationConfig: { temperature: .7, maxOutputTokens: 500 }
-          })
-        }
-      )
+      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model: 'llama-3.1-8b-instant',
+          messages: [
+            { role: 'system', content: portfolioContext },
+            ...conversationHistory.current
+          ],
+          max_tokens: 500,
+          temperature: 0.7
+        })
+      })
+
       const data = await res.json()
       if (!res.ok || data.error) throw new Error(data.error?.message || res.status)
-      const reply = data.candidates[0].content.parts[0].text
-      conversationHistory.current.push({ role: 'model', parts: [{ text: reply }] })
+      const reply = data.choices[0].message.content
+      conversationHistory.current.push({ role: 'assistant', content: reply })
       addMessage(reply, 'bot')
     } catch (err) {
       addMessage('Error: ' + err.message, 'bot')

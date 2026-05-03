@@ -673,7 +673,7 @@
             background: var(--surface); border: 1px solid var(--border);
             border-radius: var(--r-lg); padding: 32px;
             max-width: 540px; margin-left: auto; margin-right: auto;
-            display:block;
+            display:none;
         }
         .contact-form h3 {
             font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem;
@@ -896,6 +896,62 @@
         }
         [data-tooltip]:hover::after { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+        /*Page Loader*/
+        .page-loader {
+          position: fixed; inset: 0;
+          background: var(--bg);
+          z-index: 99999;
+          display: flex; align-items: center; justify-content: center;
+          transition: opacity 0.5s ease;
+        }
+        .page-loader.fade-out { opacity: 0; pointer-events: none; }
+
+        .loader-content {
+          display: flex; flex-direction: column;
+          align-items: center; gap: 16px;
+          text-align: center;
+        }
+        .loader-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(2rem, 6vw, 3.5rem);
+          letter-spacing: 0.15em;
+          color: var(--amber);
+          animation: loaderFadeUp 0.8s ease forwards;
+          opacity: 0;
+        }
+        .loader-subtitle {
+          font-family: 'Outfit', sans-serif;
+          font-size: clamp(0.75rem, 2vw, 0.95rem);
+          font-weight: 500;
+          letter-spacing: 0.3em;
+          text-transform: uppercase;
+          color: var(--muted);
+          animation: loaderFadeUp 0.8s ease 0.3s forwards;
+          opacity: 0;
+        }
+        .loader-dots {
+          display: flex; gap: 8px;
+          animation: loaderFadeUp 0.8s ease 0.5s forwards;
+          opacity: 0;
+        }
+        .loader-dots span {
+          width: 6px; height: 6px;
+          border-radius: 50%;
+          background: var(--amber);
+          animation: loaderDot 1.2s ease-in-out infinite;
+        }
+        .loader-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .loader-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes loaderFadeUp {
+          from { opacity: 0; transform: translateY(16px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes loaderDot {
+          0%, 100% { transform: translateY(0); opacity: 0.4; }
+          50%       { transform: translateY(-8px); opacity: 1; }
+        }
+        
         /* ANIMATIONS */
         @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }

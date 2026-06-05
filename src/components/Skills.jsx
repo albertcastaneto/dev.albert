@@ -5,20 +5,20 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const backendSkills = [
-  { name: 'ASP.NET Core MVC', context: 'Enterprise web applications, RBAC, dashboards', level: 92, tooltip: 'Primary daily framework — used across all core systems' },
-  { name: 'C# / .NET', context: 'Business logic, EF Core, dependency injection', level: 90, tooltip: 'Core language — used across all backend and data layers' },
-  { name: 'SQL Server', context: 'Query optimization, stored procedures, data modeling', level: 88, tooltip: 'Complex queries, stored procedures, performance tuning' },
-  { name: 'Entity Framework Core', context: 'ORM, migrations, repository pattern', level: 85, tooltip: 'Applied in production — enforces clean data access layers' },
-  { name: 'Auth & Role-Based Access', context: 'Authentication flows, permission systems', level: 87, tooltip: 'Granular RBAC — different access levels per role across systems' },
-  { name: 'Excel / PDF Mapping', context: 'Bulk data pipelines, form automation, reporting', level: 82, tooltip: 'EPPlus + PDF mapping — used in Pag-IBIG auto-fill and sales reporting' },
+  { name: 'ASP.NET Core MVC', context: 'Enterprise web applications, RBAC, dashboards', level: 97, tooltip: 'Primary daily framework — used across all core systems' },
+  { name: 'C# / .NET', context: 'Business logic, EF Core, dependency injection', level: 95, tooltip: 'Core language — used across all backend and data layers' },
+  { name: 'SQL Server', context: 'Query optimization, stored procedures, data modeling', level: 92, tooltip: 'Complex queries, stored procedures, performance tuning' },
+  { name: 'Entity Framework Core', context: 'ORM, migrations, repository pattern', level: 92, tooltip: 'Applied in production — enforces clean data access layers' },
+  { name: 'Auth & Role-Based Access', context: 'Authentication flows, permission systems', level: 90, tooltip: 'Granular RBAC — different access levels per role across systems' },
+  { name: 'Excel / PDF Mapping', context: 'Bulk data pipelines, form automation, reporting', level: 95, tooltip: 'EPPlus + PDF mapping — used in Pag-IBIG auto-fill and sales reporting' },
 ]
 
 const frontendSkills = [
-  { name: 'JavaScript / jQuery', context: 'DOM manipulation, AJAX, dynamic UI interactions', level: 78, tooltip: 'Used across all system UIs — forms, dashboards, live data' },
-  { name: 'Bootstrap', context: 'Responsive layouts, component systems', level: 82, tooltip: 'Primary CSS framework for all system interfaces and websites' },
-  { name: 'HTML5 / CSS3', context: 'Semantic markup, responsive design, layouts', level: 80, tooltip: 'Foundation of all frontend work — clean, accessible markup' },
-  { name: 'Responsive Web Design', context: 'Mobile-first layouts, cross-browser compatibility', level: 78, tooltip: 'Applied on both internal systems and client-facing websites' },
-  { name: 'WordPress', context: 'Theme customization, plugin setup, CMS', level: 70, tooltip: 'Setup and customization for business websites' },
+  { name: 'JavaScript / jQuery', context: 'DOM manipulation, AJAX, dynamic UI interactions', level: 94, tooltip: 'Used across all system UIs — forms, dashboards, live data' },
+  { name: 'Bootstrap', context: 'Responsive layouts, component systems', level: 97, tooltip: 'Primary CSS framework for all system interfaces and websites' },
+  { name: 'HTML5 / CSS3', context: 'Semantic markup, responsive design, layouts', level: 95, tooltip: 'Foundation of all frontend work — clean, accessible markup' },
+  { name: 'Responsive Web Design', context: 'Mobile-first layouts, cross-browser compatibility', level: 95, tooltip: 'Applied on both internal systems and client-facing websites' },
+  { name: 'WordPress', context: 'Theme customization, plugin setup, CMS', level: 85, tooltip: 'Setup and customization for business websites' },
 ]
 
 function SkillGroup({ skills, idPrefix }) {

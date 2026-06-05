@@ -48,28 +48,33 @@ function About() {
 
     return () => ScrollTrigger.getAll().forEach(t => t.kill())
   }, [])
+
   return (
     <section id="about">
       <div className="about-inner">
         <p className="section-eyebrow">Background</p>
         <h2 className="section-title">Experience &amp;<br />Philosophy</h2>
 
+        <p style={{ color: 'var(--muted)', fontSize: '.98rem', lineHeight: 1.8, marginBottom: '40px', maxWidth: '720px', fontWeight: 300 }}>
+          I'm a Software Developer with two areas of focus: <strong style={{ color: 'var(--text)', fontWeight: 600 }}>enterprise business applications</strong> built with ASP.NET Core MVC and SQL Server, and <strong style={{ color: 'var(--text)', fontWeight: 600 }}>professional websites</strong> for businesses that need a strong online presence. Everything I ship is production-ready and built to be maintained long-term.
+        </p>
+
         <div className="stats-row">
           <div className="stat-box">
-            <span className="stat-num" data-target="3">0</span>
+            <span className="stat-num" data-target="3" data-suffix="+">0</span>
             <span className="stat-label">Years Pro</span>
           </div>
           <div className="stat-box">
-            <span className="stat-num" data-target="4">0</span>
-            <span className="stat-label">Core Systems</span>
+            <span className="stat-num" data-target="6" data-suffix="+">0</span>
+            <span className="stat-label">Projects Shipped</span>
+          </div>
+          <div className="stat-box">
+            <span className="stat-num" data-target="2">0</span>
+            <span className="stat-label">Tech Tracks</span>
           </div>
           <div className="stat-box">
             <span className="stat-num" data-target="100" data-suffix="%">0</span>
-            <span className="stat-label">Backend Focus</span>
-          </div>
-          <div className="stat-box">
-            <span className="stat-num" data-target="4">0</span>
-            <span className="stat-label">Systems Deployed</span>
+            <span className="stat-label">Production</span>
           </div>
         </div>
 
@@ -101,9 +106,9 @@ function About() {
           </div>
 
           <div className="timeline-item">
-            <div className="t-year">Foundation</div>
+            <div className="t-year">2021</div>
             <div>
-              <p className="t-title">Philosophy</p>
+              <p className="t-title">Philosophy &amp; Foundation</p>
               <p className="t-desc">Focused on backend architecture, SQL performance optimization, and building maintainable systems designed for long-term use — prioritizing reliability over visual complexity. Real business value over impressive screenshots.</p>
             </div>
           </div>

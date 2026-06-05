@@ -30,6 +30,10 @@ function SidebarNav() {
 
   return (
     <nav className="sidebar-nav">
+      <div className="sidebar-brand">
+        <img src="/light-logo.png" alt="Logo" className="sidebar-logo sidebar-logo-light" />
+        <img src="/dark-logo.png"  alt="Logo" className="sidebar-logo sidebar-logo-dark" />
+      </div>
       {navItems.map(item => (
         <div
           key={item.section}

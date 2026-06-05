@@ -177,7 +177,6 @@ function Contact() {
         <div className="social-links">
           <a className="social-link" href="https://github.com/albertcastaneto" target="_blank" rel="noopener noreferrer"><i className='bx bxl-github'></i></a>
           <a className="social-link" href="https://linkedin.com/in/albert-casta%C3%B1eto" target="_blank" rel="noopener noreferrer"><i className='bx bxl-linkedin'></i></a>
-          <a className="social-link" href="mailto:albertcastaneto@gmail.com"><i className='bx bx-mail-send'></i></a>
         </div>
       </div>
     </section>

@@ -134,7 +134,7 @@ function Contact() {
           <a href="mailto:albertcastaneto@gmail.com" className="cta cta-primary">
             <i className='bx bx-mail-send'></i> Send Email
           </a>
-          <a href="https://linkedin.com/in/albert-casta%C3%B1eto" target="_blank" rel="noopener noreferrer" className="cta cta-secondary">
+          <a href="www.linkedin.com/in/albert-castañeto-3b829b197" target="_blank" rel="noopener noreferrer" className="cta cta-secondary">
             <i className='bx bxl-linkedin'></i> LinkedIn
           </a>
         </div>
@@ -176,7 +176,7 @@ function Contact() {
 
         <div className="social-links">
           <a className="social-link" href="https://github.com/albertcastaneto" target="_blank" rel="noopener noreferrer"><i className='bx bxl-github'></i></a>
-          <a className="social-link" href="https://linkedin.com/in/albert-casta%C3%B1eto" target="_blank" rel="noopener noreferrer"><i className='bx bxl-linkedin'></i></a>
+          <a className="social-link" href="www.linkedin.com/in/albert-castañeto-3b829b197" target="_blank" rel="noopener noreferrer"><i className='bx bxl-linkedin'></i></a>
         </div>
       </div>
     </section>

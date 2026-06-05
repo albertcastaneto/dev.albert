@@ -84,7 +84,7 @@ const projects = [
     url: null,
   },
   {
-    id: 4,
+    id: 5,
     type: 'web',
     label: 'Web Project',
     img: 'solution.png',
@@ -103,7 +103,7 @@ const projects = [
     url: 'https://solution-team-xi.vercel.app/',
   },
   {
-    id: 5,
+    id: 6,
     type: 'web',
     label: 'Web Project',
     img: 'verdana.png',
@@ -123,7 +123,7 @@ const projects = [
     url: 'https://project-verdana.vercel.app/',
   },
   {
-    id: 6,
+    id: 4,
     type: 'web',
     label: 'Web Project',
     img: 'obs.png',
